@@ -15,9 +15,6 @@ annotation class Authorized()
 open class AuthAspect(@Autowired val sessionService: SessionService) {
     @Before("@annotation(com.retaily.common.web.Authorized)")
     fun before() {
-        println("HEYYYYY *******")
-        println("getUserId: ${sessionService.getUserId()}")
-
         if (sessionService.getUserId() == null) throw NotInSessionException("Not in session")
     }
 }
