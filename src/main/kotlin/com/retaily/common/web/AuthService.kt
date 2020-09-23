@@ -1,9 +1,9 @@
 package com.retaily.common.web
 
 import com.retaily.common.models.User
+import javax.servlet.http.HttpSession
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import javax.servlet.http.HttpSession
 
 @Service
 class SessionService(@Autowired val session: HttpSession) {

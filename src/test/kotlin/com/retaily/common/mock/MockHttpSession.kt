@@ -1,12 +1,12 @@
 package com.retaily.common.mock
 
-import java.util.*
+import java.util.Enumeration
 import javax.servlet.ServletContext
 import javax.servlet.http.HttpSession
 import javax.servlet.http.HttpSessionContext
 import kotlin.collections.HashMap
 
-class MockHttpSession: HttpSession {
+class MockHttpSession : HttpSession {
     private var map = HashMap<String, Any>()
 
     override fun getLastAccessedTime(): Long {
@@ -74,7 +74,6 @@ class MockHttpSession: HttpSession {
     override fun getMaxInactiveInterval(): Int {
         TODO("Not yet implemented")
     }
-
 
     // implement rest of the methods you will use
 
